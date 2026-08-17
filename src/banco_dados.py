@@ -1,11 +1,15 @@
-from datetime import date
+from dotenv import load_dotenv
 from mysql import connector
+import os
 
-HOST = "127.0.0.1"
-PORTA = 3306
-USUARIO = "root"
-SENHA = "admin"
-BANCO = "restau_calabresa"
+
+load_dotenv()
+
+HOST = os.getenv("BD_HOST")
+PORTA = os.getenv("BD_PORTA")
+USUARIO = os.getenv("BD_USUARIO")
+SENHA = os.getenv("BD_SENHA")
+BANCO = os.getenv("BD_NOME")
 
 def conectar():
     """Abre a conexão com MySQL e retorna ela"""
