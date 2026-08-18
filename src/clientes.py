@@ -1,6 +1,7 @@
 from datetime import date
 from banco_dados import conectar
-    
+
+
 
 def cadastrar():
     print("\n---- CADASTRAR CLIENTE----")
